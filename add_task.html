@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/add-task.css">
+    <link rel="icon" href="img/checklist.png" type="x-icon">
+    <title>HealDocs</title>
+</head>
+
+<body>
+
+    <div class="modal-card">
+        <!-- Header -->
+        <div class="modal-header">
+            <h2>Add New List</h2>
+            <a type="button" href="index.html" class="close-btn">&times;</a>
+        </div>
+        <p class="modal-subtitle">Fill in the details below to create your task.</p>
+
+        <!-- Form -->
+        <form class="modal-form">
+            <div class="input-group">
+                <input type="text" class="list-name" placeholder="Task Name" required>
+            </div>
+
+            <div class="input-group icon-right">
+                <input type="text" class="list-due-date" placeholder="Due Date" onfocus="(this.type='date')" onblur="(this.type='text')">
+                <i class="fa-regular fa-calendar-days icon"></i>
+            </div>
+
+            <div class="input-group icon-right">
+                <input type="text" class="list-time" placeholder="9:00 AM" onfocus="(this.type='time')" onblur="(this.type='text')">
+                <i class="fa-regular fa-clock icon"></i>
+            </div>
+
+            <div class="input-group">
+                <textarea rows="4" class="list-description" placeholder="Description"></textarea>
+            </div>
+
+            <!-- Actions -->
+            <div class="modal-actions">
+                <a type="button" href="index.html" class="btn btn-cancel">Cancel</a>
+                <button type="submit" class="btn btn-submit">Add New</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="js/add_task.js"></script>
+</body>
+
+</html>

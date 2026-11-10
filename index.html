@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="img/checklist.png" type="x-icon">
+    <title>HealDocs</title>
+</head>
+
+<body>
+    <div class="app-container">
+
+        <!-- HEADER -->
+        <header class="header">
+            <h1>Todo List</h1>
+        </header>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="parent-logo">
+                <div class="logo">
+                    <img src="img/checklist.png" alt="logo" width="35px" height="35px">
+                </div>
+                <h2>HealDocs</h2>
+            </div>
+
+            <nav class="sidebar-menu">
+
+                <button class="todo-button">
+                    <img src="img/to-do-list.png" alt="todo-list" width="20" height="20">
+
+                    <p>Todo List</p>
+
+                    <img src="img/down-arrow.png" alt="arrow-down" width="15" height="15">
+                </button>
+
+                <ul class="todo-list hidden">
+                    <!-- Lists will appear here -->
+                </ul>
+
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main">
+            <section class="tasks-section">
+
+                <div class="tasks-header">
+                    <input type="search" placeholder="Search List" id="search">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <a href="add_task.html">
+                        <button class="add-list">+ Add New List</button>
+                    </a>
+                </div>
+
+                <hr>
+
+                <div class="tasks-tabs">
+                    <button class="active-task">Active Task</button>
+                    <button class="completed-task">Completed</button>
+                </div>
+
+                <div class="tasks-grid">
+                    
+                </div>
+
+            </section>
+
+        </main>
+
+
+    </div>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

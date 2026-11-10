@@ -1,0 +1,329 @@
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@100..900&family=Archivo+Black&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Geist:ital,wght@0,100..900;1,100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=League+Spartan:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira:wght@0,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.app-container {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr;
+    min-height: 100vh;
+    grid-template-areas:
+        "sidebar header"
+        "sidebar main";
+}
+
+.header {
+    grid-area: header;
+}
+
+.sidebar {
+    grid-area: sidebar;
+}
+
+.main {
+    grid-area: main;
+}
+
+.parent-logo {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.parent-logo h2 {
+    font-size: 1.5rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.sidebar {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    background-color: rgb(247, 247, 247);
+}
+
+.header {
+    background-color: rgb(247, 247, 247);
+}
+
+.header h1 {
+    font-size: 2rem;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    position: relative;
+    top: 1.5rem;
+}
+
+/* Sidebar Menu */
+.sidebar-menu {
+    margin-top: 3rem;
+}
+
+/* Todo Button */
+.todo-button {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    border: none;
+    padding: 1rem 0.5rem;
+    border-radius: 10px;
+    transition: 0.2s;
+    width: 100%;
+    cursor: pointer;
+}
+
+.todo-button:hover {
+    background-color: rgb(200, 217, 237);
+    transform: scale(1.03);
+}
+
+.todo-button p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 0.8rem;
+    padding-right: 4rem;
+}
+
+/* Todo Lists */
+.todo-list {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 0.5rem;
+}
+
+.todo-list li {
+    padding: 0.7rem;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.todo-list li:hover {
+    background-color: rgb(200, 217, 237);
+}
+
+/* Hide Lists */
+.hidden {
+    display: none;
+}
+
+/* Main Content */
+.main {
+    grid-area: main;
+    background-color: white;
+    border-top-left-radius: 15px;
+    margin-top: -8px;
+}
+
+.tasks-header {
+    margin-bottom: 2.5rem;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 1.2rem;
+    gap: 1rem;
+}
+
+.tasks-header input {
+    border: 1px solid rgba(0, 0, 0, 0.214);
+    padding: 0.5rem 2rem;
+    border-radius: 10px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    position: relative;
+}
+
+.tasks-header i {
+    position: absolute;
+    top: 30%;
+    right: 62.3%;
+    color: #777;
+    font-size: 13px;
+}
+
+.tasks-header button {
+    border: none;
+    background-color: rgb(200, 217, 237);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    transition: 0.2s;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.tasks-header button:hover {
+    background-color: rgba(159, 195, 237, 0.953);
+    cursor: pointer;
+}
+
+.tasks-tabs {
+    padding: 2rem 0 1rem 2rem;
+    display: flex;
+    gap: 10px;
+}
+
+.tasks-tabs button {
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: rgba(113, 116, 120, 0.236);
+    border-radius: 5px;
+    transition: 0.2s;
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.tasks-tabs button:hover {
+    background-color: rgba(159, 195, 237, 0.953);
+    cursor: pointer;
+}
+
+.tasks-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 380px);
+    gap: 20px;
+    padding: 2rem;
+}
+
+.task-card {
+    background-color: rgba(159, 195, 237, 0.555);
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.task-card p {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: rgb(70, 69, 69);
+    padding-bottom: 1rem;
+    min-width: 0;
+    overflow-wrap: anywhere;
+
+}
+
+.task-header {
+    display: flex;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
+}
+
+.task-header h3 {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.time {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.time span {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.sidebar-text {
+    display: flex;
+    justify-content: space-between;
+}
+
+.delete-list {
+    padding: 0 5px;
+    border: none;
+    border-radius: 10px;
+}
+
+.delete-list:hover {
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    /* Main Layout */
+    .app-container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto 1fr;
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "main";
+    }
+
+    /* Header */
+    .header {
+        padding: 1rem 1.5rem;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+        top: 0;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        padding: 1rem 1.5rem;
+    }
+
+    .sidebar-menu {
+        margin-top: 1rem;
+    }
+
+    .todo-button {
+        max-width: 200px;
+    }
+
+    /* Main */
+    .main {
+        margin-top: 0;
+        border-radius: 0;
+    }
+
+    /* Tasks Header */
+    .tasks-header {
+        top: 0;
+        margin: 1.5rem 1rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .search-box {
+        flex: 1;
+        min-width: 0;
+    }
+
+    .search-box input {
+        width: 100%;
+    }
+
+    /* Tasks Grid */
+    .tasks-grid {
+        grid-template-columns: repeat(auto-fit,
+                minmax(min(100%, 320px), 380px));
+        justify-content: center;
+        padding: 1rem;
+    }
+
+    .task-card {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
